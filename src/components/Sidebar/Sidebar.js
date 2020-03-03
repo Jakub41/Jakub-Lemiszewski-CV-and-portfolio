@@ -4,13 +4,14 @@ import {
   SideNavItems,
   SideNavLink
 } from "carbon-components-react/lib/components/UIShell";
-import { User32, Code32, Portfolio32, Education32 } from "@carbon/icons-react";
+import { User32, Code32, Portfolio32, Education32, Keyboard32 } from "@carbon/icons-react";
 
 import { StyledSideNav } from "./styles";
 
 const items = [
   { name: "Me", path: "/" },
   { name: "Projects", path: "/projects" },
+  { name: "Portfolio", path: "/portfolio" },
   { name: "Work", path: "/work" },
   { name: "Education", path: "/education" }
 ];
@@ -27,7 +28,7 @@ const Sidebar = () => {
     >
       <SideNavItems>
         {items.map(i => (
-          <SideNavLink
+          <SideNavLink className="nav-icon"
             isActive={
               location.pathname === "/" && i.path === "/"
                 ? true
@@ -43,6 +44,8 @@ const Sidebar = () => {
                 ? Code32
                 : i.name === "Work"
                 ? Portfolio32
+                : i.name === "Portfolio"
+                ? Keyboard32
                 : Education32
             }
           >

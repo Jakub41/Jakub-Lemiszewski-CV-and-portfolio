@@ -4,6 +4,7 @@ import Me from "./Me";
 import Projects from "./Projects";
 import Work from "./Work";
 import Education from "./Education";
+import Portfolio from "./Portfolio";
 
 const Pages = ({ user }) => {
   return (
@@ -14,6 +15,9 @@ const Pages = ({ user }) => {
         </Route>
         <Route path="/projects">
           <Projects user={user} />
+        </Route>
+        <Route path="/portfolio">
+          <Portfolio user={user} />
         </Route>
         <Route path="/work">
           <Work user={user} />
