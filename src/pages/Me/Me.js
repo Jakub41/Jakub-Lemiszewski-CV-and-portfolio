@@ -4,7 +4,7 @@ import { SectionTitle, Paragraph, Pill } from "../../styles";
 import { ProfileLink, StackIcon } from "./styles";
 import { FaGithub, FaLinkedinIn, FaInfinity } from "react-icons/fa";
 import { IconContext } from "react-icons";
-
+import Icons from "../../components/Icons";
 
 const Me = ({ user }) => {
   return (
@@ -16,7 +16,7 @@ const Me = ({ user }) => {
       <div>
         <SectionTitle>Skills</SectionTitle>
         <div>
-          {user.skills.map(skill => (
+          {user.skills.map((skill) => (
             <Pill key={skill.name}>{skill.name}</Pill>
           ))}
         </div>
@@ -28,9 +28,7 @@ const Me = ({ user }) => {
             <ProfileLink key={profile.network}>
               {i !== 0 && " | "}
               <a href={profile.url} target="_blank" rel="noreferrer noopener">
-                <IconContext.Provider
-                  value={{ className: "p-icons" }}
-                >
+                <IconContext.Provider value={{ className: "p-icons" }}>
                   {profile.network === "GitHub" ? (
                     <FaGithub />
                   ) : profile.network === "LinkedIn" ? (
@@ -48,6 +46,7 @@ const Me = ({ user }) => {
         <SectionTitle>
           <StackIcon />
         </SectionTitle>
+        <Icons />
       </div>
     </Layout>
   );

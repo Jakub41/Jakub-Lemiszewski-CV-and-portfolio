@@ -1,2 +1,2 @@
-import Icons from "./icons";
+import Icons from "./Icons";
 export default Icons;

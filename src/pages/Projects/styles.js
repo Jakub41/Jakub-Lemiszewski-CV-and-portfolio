@@ -14,3 +14,14 @@ export const ProjectTitle = styled.h4`
 export const SkillContainer = styled.div`
   margin-top: 1.2rem;
 `;
+
+export const ProjectLink = styled.a`
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  &:hover {
+   color: red;
+  }
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+`;
