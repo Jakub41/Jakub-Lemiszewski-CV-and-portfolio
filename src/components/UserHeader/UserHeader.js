@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import { ArrowRight16 } from "@carbon/icons-react";
+import ReactCountryFlag from "react-country-flag";
 
 import { HeaderContainer, Header, Image, ViewResumeLink } from "./styles";
 
@@ -23,7 +24,18 @@ const UserHeader = ({ user }) => {
             </a>
           </h4>
           <p>{user.basics.label}</p>
-          <p>Coding in {user.basics.region}</p>
+          <p>
+            Coding in {user.basics.region}{" "}
+            <ReactCountryFlag
+              className="emojiFlag"
+              countryCode="DK"
+              style={{
+                fontSize: "2em",
+                lineHeight: "2em",
+              }}
+              aria-label="Denmark"
+            />
+          </p>
           <p>
             {user.basics.yearsOfExperience} years of experience as a developer
           </p>

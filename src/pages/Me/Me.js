@@ -1,9 +1,10 @@
 import React from "react";
 import Layout from "../../components/Layout";
 import { SectionTitle, Paragraph, Pill } from "../../styles";
-import { ProfileLink } from "./styles";
+import { ProfileLink, StackIcon } from "./styles";
 import { FaGithub, FaLinkedinIn, FaInfinity } from "react-icons/fa";
 import { IconContext } from "react-icons";
+
 
 const Me = ({ user }) => {
   return (
@@ -42,6 +43,11 @@ const Me = ({ user }) => {
             </ProfileLink>
           ))}
         </ul>
+      </div>
+      <div>
+        <SectionTitle>
+          <StackIcon />
+        </SectionTitle>
       </div>
     </Layout>
   );
