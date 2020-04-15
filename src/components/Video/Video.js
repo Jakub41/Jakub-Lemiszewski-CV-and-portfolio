@@ -10,6 +10,13 @@ const Video = () => {
       mozallowfullscreen
       allowfullscreen
     ></VideoIframe>,
+    <VideoIframe
+      src="https://www.loom.com/embed/a4b4d48d2e394bf2a31df17fe7d8493d"
+      frameborder="0"
+      webkitallowfullscreen
+      mozallowfullscreen
+      allowfullscreen
+    ></VideoIframe>,
   ];
 
   return (
