@@ -1,8 +1,7 @@
 import React from "react";
 import Layout from "../../components/Layout";
 import { SectionTitle } from "../../styles";
-import { PortfolioCard } from "./styles";
-import ReactPlayer from "react-player";
+import Video from "../../components/Video";
 
 const Portfolio = ({ user }) => {
   return (
@@ -10,9 +9,7 @@ const Portfolio = ({ user }) => {
       <div>
         <SectionTitle>Portfolio</SectionTitle>
       </div>
-      <PortfolioCard>
-        <ReactPlayer url="" />
-      </PortfolioCard>
+      <Video />
     </Layout>
   );
 };
