@@ -13,6 +13,7 @@
     "carbon-components-react": "^7.10.3",
     "devicon-react-svg": "^0.2.2",
     "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "github-pages-deploy-action": "^3.4.8",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
@@ -27,7 +28,8 @@
     "styled-icons": "^10.2.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server/server.js",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
