@@ -20,4 +20,8 @@ export const PortfolioCard = styled.li`
   display: inline-block;
   border: 1px solid white;
   width: 400px;
+  @media (max-width: 680px) {
+    width: 100%;
+    height: auto;
+  }
 `;
