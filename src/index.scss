@@ -9,6 +9,10 @@ a {
   font-size: 1.25rem;
 }
 
+a:hover {
+  color: red;
+}
+
 .bx--side-nav__navigation {
   background-color: $ui-background;
 }

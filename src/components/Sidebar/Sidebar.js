@@ -2,9 +2,16 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
   SideNavItems,
-  SideNavLink
+  SideNavLink,
 } from "carbon-components-react/lib/components/UIShell";
-import { User32, Code32, Portfolio32, Education32, Keyboard32 } from "@carbon/icons-react";
+import {
+  User32,
+  Code32,
+  Portfolio32,
+  Education32,
+  Keyboard32,
+} from "@carbon/icons-react";
+import Copyright from "../Copyright";
 
 import { StyledSideNav } from "./styles";
 
@@ -13,7 +20,7 @@ const items = [
   { name: "Projects", path: "/projects" },
   { name: "Portfolio", path: "/portfolio" },
   { name: "Work", path: "/work" },
-  { name: "Education", path: "/education" }
+  { name: "Education", path: "/education" },
 ];
 
 const Sidebar = () => {
@@ -27,8 +34,9 @@ const Sidebar = () => {
       aria-label="Side navigation"
     >
       <SideNavItems>
-        {items.map(i => (
-          <SideNavLink className="nav-icon"
+        {items.map((i) => (
+          <SideNavLink
+            className="nav-icon"
             isActive={
               location.pathname === "/" && i.path === "/"
                 ? true
@@ -53,6 +61,7 @@ const Sidebar = () => {
           </SideNavLink>
         ))}
       </SideNavItems>
+      <Copyright />
     </StyledSideNav>
   );
 };
