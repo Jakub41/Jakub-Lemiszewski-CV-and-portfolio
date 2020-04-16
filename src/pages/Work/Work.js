@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../../components/Layout";
-import { SectionTitle, Paragraph } from "../../styles";
-import { WorkItem, WorkTitle, JobTitle } from "./styles";
+import { SectionTitle, Paragraph, Pill } from "../../styles";
+import { WorkItem, WorkTitle, JobTitle, Highlighted } from "./styles";
 import Loader from "../../components/Loader";
 import Timeout from "../../components/Timeout";
 
@@ -32,6 +32,11 @@ const Work = ({ user }) => {
                   </span>
                 </div>
                 <Paragraph>{work.summary}</Paragraph>
+                <Highlighted>
+                  {[...work.highlights].map((item, j) => (
+                    <Pill key={j}>{item}</Pill>
+                  ))}
+                </Highlighted>
               </WorkItem>
             ))}
           </ul>
