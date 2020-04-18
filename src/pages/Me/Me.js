@@ -7,6 +7,9 @@ import { IconContext } from "react-icons";
 import Icons from "../../components/Icons";
 import Loader from "../../components/Loader";
 import Timeout from "../../components/Timeout";
+import { Helmet } from "react-helmet";
+
+const TITLE = "JL - Me";
 
 const Me = ({ user }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -17,6 +20,9 @@ const Me = ({ user }) => {
 
   return (
     <Layout user={user}>
+      <Helmet>
+        <title>{TITLE}</title>
+      </Helmet>
       {!isLoaded ? (
         <Loader />
       ) : (

@@ -4,6 +4,9 @@ import { SectionTitle, Paragraph } from "../../styles";
 import { EducationItem, Institution, Degree } from "./styles";
 import Loader from "../../components/Loader";
 import Timeout from "../../components/Timeout";
+import { Helmet } from "react-helmet";
+
+const TITLE = "JL - Education";
 
 const Education = ({ user }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -14,6 +17,9 @@ const Education = ({ user }) => {
 
   return (
     <Layout user={user}>
+      <Helmet>
+        <title>{TITLE}</title>
+      </Helmet>
       {!isLoaded ? (
         <Loader />
       ) : (

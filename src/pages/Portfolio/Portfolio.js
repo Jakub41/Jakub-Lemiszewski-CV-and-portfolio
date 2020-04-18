@@ -4,6 +4,9 @@ import { SectionTitle } from "../../styles";
 import Video from "../../components/Video";
 import Loader from "../../components/Loader";
 import Timeout from "../../components/Timeout";
+import { Helmet } from "react-helmet";
+
+const TITLE = "JL - Portfolio";
 
 const Portfolio = ({ user }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -14,6 +17,9 @@ const Portfolio = ({ user }) => {
 
   return (
     <Layout user={user}>
+      <Helmet>
+        <title>{TITLE}</title>
+      </Helmet>
       {!isLoaded ? (
         <Loader />
       ) : (

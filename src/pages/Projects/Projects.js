@@ -10,6 +10,9 @@ import {
 import { FaExternalLinkAlt, FaGithubAlt } from "react-icons/fa";
 import Loader from "../../components/Loader";
 import Timeout from "../../components/Timeout";
+import { Helmet } from "react-helmet";
+
+const TITLE = "JL - Projects";
 
 const Projects = ({ user }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -18,6 +21,9 @@ const Projects = ({ user }) => {
 
   return (
     <Layout user={user}>
+      <Helmet>
+        <title>{TITLE}</title>
+      </Helmet>
       {!isLoaded ? (
         <Loader />
       ) : (
