@@ -16,7 +16,7 @@
     "express": "^4.17.1",
     "github-pages-deploy-action": "^3.4.8",
     "helmet": "^3.22.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.1",
     "react-country-flag": "^2.0.1",
     "react-dom": "^16.13.1",
